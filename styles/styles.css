@@ -1,103 +1,152 @@
-/*Global elements styling*/
-* {
-	box-sizing: border-box;
+/* Global style rules */
+
+@font-face {
+  font-family: 'Days';
+  src: url('../assets/fonts/Days.ttf');
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-	font-family: 'Poppins', sans-serif;
-	background-color: #000000;
+	font-family: 'PT Serif', sans-serif;
+	background-color: whitesmoke;
 	background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
 	scroll-behavior: smooth;
 }
-body {
-	max-width: 1440px;
-	margin: 0 auto;
-}
+
 main {
 	max-width: 1240px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0;
 }
+
 h2 {
-	font-size: 2.4rem;
-	color: white;
+	font-size: 2rem;
 	text-align: center;
 }
+
 a {
 	display: block;
 	text-decoration: none;
-	color: white;
-}
-@media (max-width: 740px) {
-	h2 {font-size: 2rem;}
-	main {padding: 0 10px;}
-}
-@media (max-width: 340px) {
-	main {padding: 0;}
 }
 
-/*Navigation bar*/
-#navbar {
+@media (min-width: 340px) {
+	main { padding: 0 10px; }
+}
+
+@media (min-width: 740px) {
+	main { padding: 0 20px; }
+	h2 { font-size: 2.4rem; }
+}
+
+
+/* Navigation bar */
+
+header {
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
-	display: flex;
-	justify-content: flex-end;
-	list-style-type: none;
-	padding: 0 30px;
-	margin: 0;
-	font-size: 1.4rem;
-	background: #A80C04;
+	z-index: 1;
+	background: #680595;
+	box-shadow: 0 3px 3px black;
 	font-family: "Roboto Slab", serif;
-	z-index: 2;
+	text-transform: uppercase;
 }
-@media (min-width: 1650px) {
-	#navbar {
-		width: 1650px;
-		left: calc((100vw - 1650px) / 2);
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	height: 60px;
+}
+@media (min-width: 340px) {
+	nav {
+		padding: 0 5px;
 	}
 }
-#navbar li:first-child {
-	margin-right: auto;
-}
-#navbar a {
-	height: 100%;
-	padding: 14px 18px;
-	font-weight: bold;
-}
-#navbar a:hover {
-	background: white;
-	color: black;
-}
-.fa-autoprefixer {
-	margin-right: 5px;
-	padding: 3px;
-	border: 2px solid white;
-}
-@media (max-width: 740px) {
-	#navbar {
-		padding: 0;
-		font-size: 1.2rem;
-	}
-	#navbar a {padding: 14px 10px;}
-	.fa-autoprefixer {
-		padding: 2px;
-		border: 1px solid white;
+@media (min-width: 750px) {
+	nav {
+		padding: 0 30px;
 	}
 }
 
-/*Welcome section*/
+#logo {
+	padding: 0 0.3rem;
+}
+
+#logo svg {
+	height: 40px;
+	transform: rotate(90deg);
+	fill: white;
+	transition: 0.5s ease-in-out;
+	vertical-align: middle;
+}
+@media (min-width: 740px) {
+	#logo svg {
+		height: 50px;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	#logo svg:hover {
+		transform: rotate(0);
+	}
+}
+
+#navbar {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#navbar a {
+	padding: 0.6rem 0.3rem;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: white;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid transparent;
+	transition: border-bottom 0.4s ease-in-out;
+}
+@media (min-width: 350px) {
+	#navbar a {
+		padding: 0.6rem 0.45rem;
+		font-size: 0.95rem;
+	}
+}
+@media (min-width: 750px) {
+	#navbar a {
+		padding: 0.6rem 1rem;
+		font-size: 1rem;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	#navbar a:hover {
+		border-bottom: 3px solid white;
+	}
+}
+
+
+/* Welcome section */
+
 #welcome-section {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 }
 h1 {
-	color: white;
 	font-size: 3.8rem;
 	text-align: center;
-	font-family: "Roboto Slab", serif;
 }
 #heading-span {
 	font-size: 2.5rem;
