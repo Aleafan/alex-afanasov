@@ -12,7 +12,7 @@
 }
 
 html {
-	font-family: 'PT Serif', sans-serif;
+	font-family: 'Roboto Slab', sans-serif;
 	background-color: whitesmoke;
 	background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
 	scroll-behavior: smooth;
@@ -23,24 +23,30 @@ main {
 	margin: 0 auto;
 	padding: 0;
 }
+@media (min-width: 340px) {
+	main { 
+		padding: 0 10px;
+	}
+}
+@media (min-width: 720px) {
+	main {
+		padding: 0 20px;
+	}
+}
 
 h2 {
 	font-size: 2rem;
 	text-align: center;
 }
+@media (min-width: 720px) {
+	h2 {
+		font-size: 2.4rem;
+	}
+}
 
 a {
 	display: block;
 	text-decoration: none;
-}
-
-@media (min-width: 340px) {
-	main { padding: 0 10px; }
-}
-
-@media (min-width: 740px) {
-	main { padding: 0 20px; }
-	h2 { font-size: 2.4rem; }
 }
 
 
@@ -70,7 +76,7 @@ nav {
 		padding: 0 5px;
 	}
 }
-@media (min-width: 750px) {
+@media (min-width: 720px) {
 	nav {
 		padding: 0 30px;
 	}
@@ -84,10 +90,10 @@ nav {
 	height: 40px;
 	transform: rotate(90deg);
 	fill: white;
-	transition: 0.5s ease-in-out;
+	transition: 0.4s ease-in-out;
 	vertical-align: middle;
 }
-@media (min-width: 740px) {
+@media (min-width: 720px) {
 	#logo svg {
 		height: 50px;
 	}
@@ -113,15 +119,15 @@ nav {
 	color: white;
 	border-bottom: 3px solid transparent;
 	border-top: 3px solid transparent;
-	transition: border-bottom 0.4s ease-in-out;
+	transition: border-bottom 0.3s ease-in-out;
 }
-@media (min-width: 350px) {
+@media (min-width: 340px) {
 	#navbar a {
-		padding: 0.6rem 0.45rem;
+		padding: 0.6rem 0.4rem;
 		font-size: 0.95rem;
 	}
 }
-@media (min-width: 750px) {
+@media (min-width: 720px) {
 	#navbar a {
 		padding: 0.6rem 1rem;
 		font-size: 1rem;
@@ -135,7 +141,7 @@ nav {
 }
 
 
-/* Welcome section */
+/* Title section */
 
 #welcome-section {
 	display: flex;
@@ -144,19 +150,50 @@ nav {
 	align-items: center;
 	height: 100vh;
 }
+
 h1 {
-	font-size: 3.8rem;
+	font-size: 1.55rem;
 	text-align: center;
+	text-transform: uppercase;
 }
-#heading-span {
-	font-size: 2.5rem;
-}
-@media (max-width: 740px) {
-	h1 {font-size: 3rem;}
-	#heading-span {font-size: 2rem;}
+@media (min-width: 720px) {
+	h1 {
+		font-size: 2.8rem;
+		letter-spacing: 0.05rem;
+	}
 }
 
-/*Projects section*/
+#profession {
+	font-size: 1.3rem;
+	margin: 0.5rem 0;
+}
+@media (min-width: 720px) {
+	#profession {
+		font-size: 1.7rem;
+	}
+}
+
+#city {
+	font-family: "Roboto";
+	font-size: 1.2rem;
+	font-style: italic;
+}
+
+#welcome-section img {
+	display: block;
+	width: 160px;
+	margin-bottom: 0;
+	border-radius: 50%;
+	border: 5px solid #680595;
+}
+@media (min-width: 720px) {
+	#welcome-section img {
+		width: 180px;
+	}
+}
+
+
+/* Projects section */
 #projects {
 	scroll-margin-top: 70px;
 }
