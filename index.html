@@ -6,8 +6,6 @@
 
 		<title>Alexander Afanasov</title>
 
-		<script src="https://kit.fontawesome.com/3568576df5.js" crossorigin="anonymous"></script>
-
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
@@ -16,6 +14,9 @@
 
 		<link href="./styles/normalize.css" rel="stylesheet">
 		<link href="./styles/styles.css" rel="stylesheet">
+
+		<script src='https://kit.fontawesome.com/3568576df5.js' crossorigin='anonymous'></script>
+		<script src='./scripts/main.js' defer></script>
 	</head>
 
 	<body>
@@ -41,54 +42,34 @@
 		</header>
 
 		<main>
-			<section id="welcome-section">
-				<img src='./assets/images/my_photo.jpg' alt='My photo'>
+			<section id='welcome-section'>
+				<img src='./assets/images/my_photo.jpg' alt='Мое фото'>
 				<h1>Александр Афанасов</h1>
 				<p id='profession'>front-end разработчик</p>
 				<p id='city'>г. Санкт-Петербург</p>
 			</section>
 
-			<section id="projects">
-				<h2>These are some of my projects:</h2>
-				<div id="grid-container">
-					<a class="project-tile"
-						target="_blank" 
-						href="https://codepen.io/aleafan/pen/yLaRMOO">
+			<section id='projects'>
+				<h2>Мои проекты:</h2>
+				<div class='grid-container'>
+					<div class='project-tile' onclick=''>
 						<figure>
-							<img class="project-img" 
-									src="https://drive.google.com/uc?export=download&id=1EuYA5HqgB94Ga0DxtufDqN79RAz9izms"
-									alt="Screenshot of survey page">
+							<img class='project-img'
+								src='./assets/images/to-do-list-img.png' 
+								alt='Скриншот приложения "To Do List"'
+							/>
 							<figcaption>
-								<span class="invisible">&lt; </span>Demographic Survey Page<span class="invisible"> /&gt;</span>
-							</figcaption>
-					</figure>
-					</a>
-
-					<a class="project-tile" 
-						target="_blank" 
-						href="https://codepen.io/aleafan/pen/BaLMpqd">
-						<figure>
-							<img class="project-img" 
-									src="https://drive.google.com/uc?export=download&id=1FpECErvPKGT735ZcXLn7ekUHGVMhaKAD"
-									alt="Screenshot of album landing page">
-							<figcaption>
-								<span class="invisible">&lt; </span>Album Landing Page<span class="invisible"> /&gt;</span>
+								<span class="invisible">&lt; </span>To Do List<span class="invisible"> /&gt;</span>
 							</figcaption>
 						</figure>
-					</a>
-
-					<a class="project-tile" 
-						target="_blank" 
-						href="https://codepen.io/aleafan/pen/NWbWdOE">
-						<figure>
-							<img class="project-img" 
-									src="https://drive.google.com/uc?export=download&id=17V5BZKLbQKOhaggzysB_9sDuNQrT0gML"
-									alt="Screenshot of techical documentation page">
-							<figcaption>
-								<span class="invisible">&lt; </span>Technical Documentation Page<span class="invisible"> /&gt;</span>
-							</figcaption>
-						</figure>
-					</a>
+						<div class='project-info'>
+							<div class='project-details'>
+								<p>Приложение для организации повседневных задач</p>
+								<p class='project-tech'>Webpack / JavaScript / HTML / CSS</p>
+							</div>
+							<a target='_blank' href='https://aleafan.github.io/to-do-list/'>Открыть приложение</a>
+						</div>
+					</div>
 				</div>
 				
 				<a href="https://codepen.io/your-work/"
