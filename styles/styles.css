@@ -49,6 +49,19 @@ a {
 	text-decoration: none;
 }
 
+a:visited {
+	color: initial;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
 
 /* Navigation bar */
 
@@ -57,7 +70,7 @@ header {
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 2;
 	background: #680595;
 	box-shadow: 0 3px 3px black;
 	font-family: "Roboto Slab", serif;
@@ -194,46 +207,113 @@ h1 {
 
 
 /* Projects section */
+
 #projects {
 	scroll-margin-top: 70px;
 }
-#grid-container {
+
+.grid-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 	justify-items: center;
-	grid-gap: 30px;
-	padding: 0 10px;
+	gap: 30px;
+	padding: 0;
 }
+
 .project-tile {
+	position: relative;
 	max-width: 450px;
-	font-weight: 500;
-	font-size: 1.1rem;
-	transition: 0.5s ease-out;
+	border-radius: 10px;
+	overflow: hidden;
+	height: max-content;
 }
-.project-tile:hover {
-	box-shadow: 2px -2px 2px 3px #cdd0cb;
-}
+
 .project-img {
-	display: block;
-	max-width: 100%;
+	transform: scale(1);
+	transition: all 0.4s ease-in-out;
 }
-.project-tile figure {
-	margin: 0;
+
+.project-tile:hover .project-img {
+	transform: scale(1.1);
 }
+
 figcaption {
-	padding: 16px 0;
+	padding: 0.5rem 0;
 	text-align: center;
 	color: white;
-	background: #393e46;
+	background: #17224f;
+	position: relative;
+	z-index: 1;
+	border-top: 1px solid white;
 }
+
 .invisible {
 	visibility: hidden;
-	color: red;
-	transition: 0.2s 0.2s ease-out;
+	color: whitesmoke;
+	transition: all 0.2s 0.2s ease-out;
 }
+
 .project-tile:hover .invisible {
 	visibility: visible;
 }
+
+.project-info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: #17224f;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 1.2rem 2.2rem;
+	align-items: center;
+	font-family: 'Roboto';
+	transition: left 0.1s linear, opacity 0.4s ease-in-out;
+}
+@media (pointer: coarse) {
+	.project-info {
+		left: -9999px;
+	}
+}
+
+.project-tile:hover .project-info {
+	left: 0;
+	opacity: 1;
+}
+
+.project-details {
+	text-align: center;
+}
+
+.project-details p {
+	margin: 0;
+}
+
+.project-details .project-tech {
+	font-size: 0.9rem;
+	color: #A5E1AD;
+	margin-top: 0.5rem;
+}
+
+.project-info a {
+	color: white;
+	border: 1px solid #A5E1AD;
+	border-radius: 12px;
+	padding: 0.5rem 1rem;
+	transition: 0.2s ease-in-out;
+	margin-top: 2rem;
+}
+
+.project-info a:hover {
+	background: #A5E1AD;
+	color: #17224f;
+}
+
+/* Unchecked CSS */
 #show-button {
 	max-width: 140px;
 	text-align: center;
@@ -244,9 +324,11 @@ figcaption {
 	background: #393e46;
 	transition: 0.5s ease-in;
 }
+
 #show-button:hover {
 	background: #A80C04;
 }
+
 .fa-angle-right {
 	position: relative;
 	font-size: 1.4rem;
@@ -256,12 +338,11 @@ figcaption {
 	transition: 0.4s ease-out;
 	z-index: 1;
 }
+
 #show-button:hover .fa-angle-right {
 	left: 3px;
 }
-@media (max-width: 740px) {
-	#grid-container {padding: 0;}
-}
+
 
 /*Contacts section*/
 #contacts {
