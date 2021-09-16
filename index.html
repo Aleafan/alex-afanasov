@@ -11,6 +11,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap" rel="stylesheet">
 
 		<link href="./styles/normalize.css" rel="stylesheet">
 		<link href="./styles/styles.css" rel="stylesheet">
@@ -32,7 +33,7 @@
 						<a href="#projects">Проекты</a>
 					</li>
 					<li>
-						<a href="#">Обо мне</a>
+						<a href="#about">Обо мне</a>
 					</li>
 					<li>
 						<a href="#contacts">Контакты</a>
@@ -50,7 +51,8 @@
 			</section>
 
 			<section id='projects'>
-				<h2>Мои проекты:</h2>
+				<h2>Мои проекты</h2>
+				<div class='underliner'></div>
 				<div class='grid-container'>
 					<div class='project-tile' onclick=''>
 						<figure>
@@ -105,7 +107,7 @@
 								<p>
 									Приложение для ведения каталога книг с личными заметками. Back-end выполнен на фреймворке Flask (Python), база данных - на SQLite.
 								</p>
-								<p class='project-tech'>Flask / Python / SQLite / Bootstrap / jQuery / JS</p>
+								<p class='project-tech'>Flask / Python / SQLite / Bootstrap / jQuery / JavaScript</p>
 							</div>
 							<a target='_blank' href='http://book-worm-project.herokuapp.com/'>Открыть сайт ></a>
 						</div>
@@ -174,9 +176,44 @@
 					<i class='fas fa-angle-right'></i>
 				</a>
 			</section>
+
+			<section id='about'>
+				<h2>Обо мне</h2>
+				<div class='underliner'></div>
+				<div class='content-about'>
+					<p>
+						Около года назад я принял решение сменить карьеру инженера и попробовать свои силы в веб-разработке. 
+						На пути самообучения занимался на онлайн-курсах: "Harvard's CS50 - Introduction to Computer Science", "The Odin Project", "freeCodeCamp".
+						За время обучения поработал с различными технологиями и разработал несколько собственных 
+						<a href='#projects'>веб-сайтов и приложений.</a>
+					</p>
+					
+					<h3>Я работаю со следующими технологиями:</h3>
+					<ul class='skills-list'>
+						<li>JavaScript</li>
+						<li>React</li>
+						<li>HTML</li>
+						<li>Webpack</li>
+						<li>CSS</li>
+						<li>Bootstrap</li>
+						<li>Git / GitHub</li>
+					</ul>
+					
+					<p>
+						Также на базовом уровне знаком с
+						<span class='skills-span'>Python, SQLite, Flask, jQuery, Sass.</span>
+					</p>
+					<p>
+						Я стремлюсь к ясному структурированному коду, минималистичному адаптивному дизайну.
+						Получаю удовольствие, шаг за шагом решая комплексные проблемы в процессе разработки.
+					</p>
+
+				</div>
+			</section>
 			
 			<section id="contacts">
-				<h2>Contact Information:</h2>
+				<h2>Contact Information</h2>
+				<div class='underliner'></div>
 				<div id="contact-data">
 					<a id="profile-link"
 						href="https://github.com/Aleafan"
