@@ -103,7 +103,7 @@ nav {
 
 #logo svg {
 	height: 40px;
-	transform: rotate(90deg);
+	transform: rotate(0);
 	fill: white;
 	transition: 0.4s ease-in-out;
 	vertical-align: middle;
@@ -112,6 +112,10 @@ nav {
 	#logo svg {
 		height: 50px;
 	}
+}
+
+#logo.active svg {
+	transform: rotate(90deg);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -155,10 +159,14 @@ nav {
 	}
 }
 
+#navbar a.active {
+	border-bottom: 3px solid white;
+}
+
 
 /* Title section */
 
-#welcome-section {
+#welcome {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -194,7 +202,7 @@ h1 {
 	font-style: italic;
 }
 
-#welcome-section img {
+#welcome img {
 	display: block;
 	width: 160px;
 	margin-bottom: 0;
@@ -202,7 +210,7 @@ h1 {
 	border: 5px solid #680595;
 }
 @media (min-width: 720px) {
-	#welcome-section img {
+	#welcome img {
 		width: 180px;
 	}
 }
@@ -427,32 +435,42 @@ figcaption {
 
 .contact-data {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	flex-wrap: wrap;
+	margin-top: 1rem;
 }
 
 .contact-data a {
 	position: relative;
 	top: 0;
 	font-size: 1.3rem;
-	padding: 10px;
-	transition: 0.3s ease-in-out;
+	padding: 8px;
+	width: 130px;
 	color: #680595;
+	border-radius: 12px;
+	transition: 0.2s ease-in-out;
+	font-family: "Roboto";
+	border: 2px solid #680595;
+	background: whitesmoke;
+	text-align: center;
 }
 @media (min-width: 720px) {
 	.contact-data a {
 		font-size: 1.5rem;
+		width: 200px;
 	}
 }
 
 @media (hover: hover) and (pointer: fine) {
 	.contact-data a:hover {
 		top: 8px;
+		background: #680595;
+		color: whitesmoke;
 	}
 }
 
 .contact-data i {
-	margin-right: 10px;
+	margin-right: 6px;
 }
 
 
