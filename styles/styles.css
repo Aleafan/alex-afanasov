@@ -8,13 +8,12 @@
 
 html {
 	font-family: 'Roboto Slab', serif;
-	background-color: whitesmoke;
-	background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+	background-image: url('../assets/images/wall4.png');
 	scroll-behavior: smooth;
 }
 
 main {
-	max-width: 1120px;
+	max-width: 1180px;
 	margin: 0 auto;
 	padding: 0 4px;
 }
@@ -31,10 +30,11 @@ main {
 
 section {
 	scroll-margin-top: 90px;
+	scroll-snap-margin-top: 90px;
 }
 
 h2 {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	text-align: center;
 	text-transform: uppercase;
 	margin: 0;
@@ -99,8 +99,9 @@ nav {
 	height: 40px;
 	transform: rotate(0);
 	fill: white;
-	transition: 0.4s ease-in-out;
+	transition: 0.3s ease-in-out;
 	vertical-align: middle;
+	enable-background: new 0 0 192 192;
 }
 @media (min-width: 720px) {
 	.logo svg {
@@ -132,7 +133,7 @@ nav {
 	color: white;
 	border-bottom: 3px solid transparent;
 	border-top: 3px solid transparent;
-	transition: border-bottom 0.3s ease-in-out;
+	transition: border-bottom 0.2s ease-in-out;
 }
 @media (min-width: 340px) {
 	.navbar a {
@@ -166,27 +167,31 @@ nav {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	min-height: 450px;
 }
 
 h1 {
 	font-size: 1.55rem;
 	text-align: center;
 	text-transform: uppercase;
+	margin: 1.5rem 0 1.2rem;
 }
 @media (min-width: 720px) {
 	h1 {
 		font-size: 2.8rem;
 		letter-spacing: 0.08rem;
+		margin: 2rem;
 	}
 }
 
 .profession {
 	font-size: 1.3rem;
-	margin: 0.5rem 0;
+	margin: 0 0 1.3rem;
 }
 @media (min-width: 720px) {
 	.profession {
 		font-size: 1.7rem;
+		margin: 0 0 2.1rem;
 	}
 }
 
@@ -194,11 +199,12 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2rem;
 	font-style: italic;
+	margin: 0;
 }
 
 #welcome img {
 	display: block;
-	width: 160px;
+	width: 150px;
 	margin-bottom: 0;
 	border-radius: 50%;
 	border: 5px solid #680595;
@@ -220,7 +226,7 @@ h1 {
 }
 @media (min-width: 720px) {
 	.underliner {
-		margin: 1rem auto 2.5rem;
+		margin: 1rem auto 3rem;
 	}
 }
 
@@ -230,11 +236,12 @@ h1 {
 	justify-items: center;
 	gap: 30px;
 	padding: 0;
+	margin-top: 1rem;
 }
 
 .project-tile {
 	position: relative;
-	max-width: 450px;
+	max-width: 440px;
 	border-radius: 10px;
 	overflow: hidden;
 	height: max-content;
@@ -366,7 +373,7 @@ figcaption {
 
 #about {
 	max-width: 800px;
-	margin: 5rem auto 0;
+	margin: 8rem auto 0;
 }
 
 .content-about,
@@ -424,6 +431,7 @@ figcaption {
 	justify-content: center;
 	height: calc(100vh - 107px);
 	scroll-margin-top: 0;
+	scroll-snap-margin-top: 0;
 }
 
 .contact-data {
@@ -456,7 +464,7 @@ figcaption {
 
 @media (hover: hover) and (pointer: fine) {
 	.contact-data a:hover {
-		top: 8px;
+		top: 5px;
 		background: #680595;
 		color: whitesmoke;
 	}
@@ -472,14 +480,20 @@ figcaption {
 footer {
 	font-family: 'Roboto Condensed', sans-serif;
 	box-shadow: 0 0 2px 2px black;
-	padding: 5px 4px;
-	font-size: 0.85rem;
-	font-style: italic;
+	padding: 5px 3px;
+	font-size: 0.8rem;
+	text-align: center;
+	background-color: whitesmoke;
 }
 @media (min-width: 350px) {
 	footer {
 		font-size: 0.9rem;
 		padding: 5px 8px;
+	}
+}
+@media (min-width: 720px) {
+	footer {
+		font-size: 1rem;
 	}
 }
 
@@ -488,5 +502,5 @@ footer p {
 }
 
 footer p:last-child {
-	margin-top: 0.2rem;
+	margin-top: 0.3rem;
 }
