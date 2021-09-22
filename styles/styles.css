@@ -1,10 +1,5 @@
 /* Global style rules */
 
-@font-face {
-  font-family: 'Days';
-  src: url('../assets/fonts/Days.ttf');
-}
-
 *,
 *::before,
 *::after {
@@ -12,7 +7,7 @@
 }
 
 html {
-	font-family: 'Roboto Slab', sans-serif;
+	font-family: 'Roboto Slab', serif;
 	background-color: whitesmoke;
 	background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
 	scroll-behavior: smooth;
@@ -75,7 +70,6 @@ header {
 	z-index: 2;
 	background: #680595;
 	box-shadow: 0 3px 3px black;
-	font-family: "Roboto Slab", serif;
 	text-transform: uppercase;
 }
 
@@ -97,11 +91,11 @@ nav {
 	}
 }
 
-#logo {
+.logo {
 	padding: 0 0.3rem;
 }
 
-#logo svg {
+.logo svg {
 	height: 40px;
 	transform: rotate(0);
 	fill: white;
@@ -109,29 +103,29 @@ nav {
 	vertical-align: middle;
 }
 @media (min-width: 720px) {
-	#logo svg {
+	.logo svg {
 		height: 50px;
 	}
 }
 
-#logo.active svg {
+.logo.active svg {
 	transform: rotate(90deg);
 }
 
 @media (hover: hover) and (pointer: fine) {
-	#logo svg:hover {
+	.logo svg:hover {
 		transform: rotate(0);
 	}
 }
 
-#navbar {
+.navbar {
 	display: flex;
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
 
-#navbar a {
+.navbar a {
 	padding: 0.6rem 0.3rem;
 	font-size: 0.9rem;
 	font-weight: bold;
@@ -141,25 +135,25 @@ nav {
 	transition: border-bottom 0.3s ease-in-out;
 }
 @media (min-width: 340px) {
-	#navbar a {
+	.navbar a {
 		padding: 0.6rem 0.4rem;
 		font-size: 0.95rem;
 	}
 }
 @media (min-width: 720px) {
-	#navbar a {
+	.navbar a {
 		padding: 0.6rem 1rem;
 		font-size: 1rem;
 	}
 }
 
 @media (hover: hover) and (pointer: fine) {
-	#navbar a:hover {
+	.navbar a:hover {
 		border-bottom: 3px solid white;
 	}
 }
 
-#navbar a.active {
+.navbar a.active {
 	border-bottom: 3px solid white;
 }
 
@@ -186,18 +180,18 @@ h1 {
 	}
 }
 
-#profession {
+.profession {
 	font-size: 1.3rem;
 	margin: 0.5rem 0;
 }
 @media (min-width: 720px) {
-	#profession {
+	.profession {
 		font-size: 1.7rem;
 	}
 }
 
-#city {
-	font-family: "Roboto";
+.city {
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.2rem;
 	font-style: italic;
 }
@@ -289,7 +283,7 @@ figcaption {
 	justify-content: center;
 	padding: 0 1.2rem 2.2rem;
 	align-items: center;
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	transition: left 0.1s linear, opacity 0.4s ease-in-out;
 }
 @media (pointer: coarse) {
@@ -340,7 +334,7 @@ figcaption {
 	color: #680595;
 	border-radius: 12px;
 	transition: 0.3s ease-in-out;
-	font-family: "Roboto";
+	font-family: 'Roboto', sans-serif;
 	border: 2px solid #680595;
 	background: whitesmoke;
 }
@@ -377,7 +371,7 @@ figcaption {
 
 .content-about,
 .content-about h3 {
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
 	line-height: 1.3rem;
 	text-align: justify;
@@ -409,14 +403,13 @@ figcaption {
 
 .skills-list li {
 	width: 50%;
-	font-family: 'Inconsolata', monospace;
-	font-weight: bold;
 }
 
 .skills-list ::marker {
 	font-size: 1.3rem;
 }
 
+.skills-list li,
 .skills-span {
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
@@ -429,7 +422,7 @@ figcaption {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: calc(100vh - 90px);
+	height: calc(100vh - 107px);
 	scroll-margin-top: 0;
 }
 
@@ -449,7 +442,7 @@ figcaption {
 	color: #680595;
 	border-radius: 12px;
 	transition: 0.2s ease-in-out;
-	font-family: "Roboto";
+	font-family: 'Roboto', sans-serif;
 	border: 2px solid #680595;
 	background: whitesmoke;
 	text-align: center;
@@ -477,13 +470,23 @@ figcaption {
 /* Footer */
 
 footer {
-	font-family: 'Roboto';
-	text-align: right;
+	font-family: 'Roboto Condensed', sans-serif;
 	box-shadow: 0 0 2px 2px black;
-	padding: 5px 10px;
+	padding: 5px 4px;
+	font-size: 0.85rem;
+	font-style: italic;
 }
-@media (min-width: 720px) {
+@media (min-width: 350px) {
 	footer {
-		padding-right: 30px;
+		font-size: 0.9rem;
+		padding: 5px 8px;
 	}
+}
+
+footer p {
+	margin: 0;
+}
+
+footer p:last-child {
+	margin-top: 0.2rem;
 }
