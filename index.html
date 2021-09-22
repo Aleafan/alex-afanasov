@@ -6,12 +6,9 @@
 
 		<title>Alexander Afanasov</title>
 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto&family=Roboto+Condensed&family=Inconsolata:wght@600&display=swap" rel="stylesheet"> 
 
 		<link href="./styles/normalize.css" rel="stylesheet">
 		<link href="./styles/styles.css" rel="stylesheet">
@@ -23,12 +20,11 @@
 	<body>
 		<header>
 			<nav>
-				<a id='logo' href="#" class='active' data-id='welcome'>
+				<a href="#" class='logo active' data-id='welcome'>
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 192 200" style="enable-background:new 0 0 192 192;" xml:space="preserve"><g><path d="M136,24h-8V8c0-4.418-3.582-8-8-8H72c-4.418,0-8,3.582-8,8v16h-8c-8.822,0-16,7.178-16,16v136c0,8.822,7.178,16,16,16h80   c8.822,0,16-7.178,16-16V40C152,31.178,144.822,24,136,24z M80,16h32v8H80V16z M136,176H56V40h80l0.01,136   C136.01,176,136.007,176,136,176z"/><path d="M64,128v8c0,8.822,7.178,16,16,16h48v-16h-16v-8h16v-16H80C71.178,112,64,119.178,64,128z M96,136H80v-8h16V136z"/><path d="M64,80v8c0,8.822,7.178,16,16,16h48V88h-16v-8h16V64H80C71.178,64,64,71.178,64,80z M96,88H80v-8h16V88z"/></g></svg>
-					<!-- AA battery by Fatima Jantasri from the Noun Project -->
 				</a>
 				
-				<ul id="navbar">
+				<ul class='navbar'>
 					<li>
 						<a href="#projects" data-id='projects'>Проекты</a>
 					</li>
@@ -46,8 +42,8 @@
 			<section id='welcome'>
 				<img src='./assets/images/my-photo.jpg' alt='Мое фото'>
 				<h1>Александр Афанасов</h1>
-				<p id='profession'>front-end разработчик</p>
-				<p id='city'>г. Санкт-Петербург</p>
+				<p class='profession'>front-end разработчик</p>
+				<p class='city'>г. Санкт-Петербург</p>
 			</section>
 
 			<section id='projects'>
@@ -200,7 +196,7 @@
 					</ul>
 					
 					<p>
-						Также на базовом уровне знаком с
+						Так же на базовом уровне знаком с
 						<span class='skills-span'>Python, SQLite, Flask, jQuery, Sass.</span>
 					</p>
 					<p>
@@ -228,7 +224,8 @@
 		</main>
 
 		<footer>
-			<em>&copy 2021, Александр Афанасов<em>
+			<p>AA battery logo by Fatima Jantasri from the Noun Project</p>
+			<p>&copy 2021, Александр Афанасов</p>
 		</footer>
 	</body>
 </html>
