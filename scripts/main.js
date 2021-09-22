@@ -27,4 +27,4 @@ function debounce(func, wait) {
   };
 };
 
-document.addEventListener('scroll', debounce(markActiveTab, 100));
+document.addEventListener('scroll', debounce(markActiveTab, 80));
