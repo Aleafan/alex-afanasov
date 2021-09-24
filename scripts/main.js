@@ -1,3 +1,18 @@
+// Language selection functionality
+if (/^ru\b/.test(navigator.language)) {
+  document.documentElement.setAttribute('lang', 'ru');
+}
+
+const btnsLang = document.querySelectorAll('.btn-lang');
+btnsLang.forEach(btn => btn.addEventListener('click', changeLanguage));
+
+function changeLanguage() {
+  document.documentElement.setAttribute('lang', this.name);
+}
+
+// Marking active nav tab functionality
+document.addEventListener('scroll', debounce(markActiveTab, 80));
+
 function markActiveTab() {
   const sections = document.querySelectorAll('section');
   const halfViewport = 0.5 * window.innerHeight;
@@ -26,5 +41,3 @@ function debounce(func, wait) {
     timeout = setTimeout(later, wait);
   };
 };
-
-document.addEventListener('scroll', debounce(markActiveTab, 80));
