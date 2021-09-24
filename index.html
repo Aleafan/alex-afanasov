@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang='en'>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +19,7 @@
 		<link href="./styles/styles.css" rel="stylesheet">
 
 		<script src='https://kit.fontawesome.com/3568576df5.js' crossorigin='anonymous'></script>
+
 		<script src='./scripts/main.js' defer></script>
 	</head>
 
@@ -31,13 +32,22 @@
 				
 				<ul class='navbar'>
 					<li>
-						<a href="#projects" data-id='projects'>Проекты</a>
+						<a href="#projects" data-id='projects'>
+							<span lang='en'>Projects</span>
+							<span lang='ru'>Проекты</span>
+						</a>
 					</li>
 					<li>
-						<a href="#about" data-id='about'>Обо мне</a>
+						<a href="#about" data-id='about'>
+							<span lang='en'>About</span>
+							<span lang='ru'>Обо мне</span>
+						</a>
 					</li>
 					<li>
-						<a href="#contacts" data-id='contacts'>Контакты</a>
+						<a href="#contacts" data-id='contacts'>
+							<span lang='en'>Contacts</span>
+							<span lang='ru'>Контакты</span>
+						</a>
 					</li>
 				</ul>
 			</nav>
@@ -45,21 +55,30 @@
 
 		<main>
 			<section id='welcome'>
-				<img src='./assets/images/my-photo.jpg' alt='Мое фото'>
-				<h1>Александр Афанасов</h1>
-				<p class='profession'>front-end разработчик</p>
-				<p class='city'>г. Санкт-Петербург</p>
+				<img src='./assets/images/my-photo.jpg' alt='My photo' class='my-photo'>
+
+				<h1 lang='en'>Alexander Afanasov</h1>
+				<h1 lang='ru'>Александр Афанасов</h1>
+
+				<p class='profession' lang='en'>front-end developer</p>
+				<p class='profession' lang='ru'>front-end разработчик</p>
+
+				<p class='city' lang='en'>Saint-Petersburg</p>
+				<p class='city' lang='ru'>г. Санкт-Петербург</p>
 			</section>
 
 			<section id='projects'>
-				<h2>Мои проекты</h2>
+				<h2 lang='en'>My projects</h2>
+				<h2 lang='ru'>Мои проекты</h2>
+
 				<div class='underliner'></div>
+
 				<div class='grid-container'>
 					<div class='project-tile' onclick=''>
 						<figure>
 							<img class='project-img'
 								src='./assets/images/to-do-list.png' 
-								alt='Скриншот приложения "To Do List"'
+								alt='Screenshot from "To Do List"'
 							/>
 							<figcaption>
 								<span class="invisible">&lt; </span>To Do List<span class="invisible"> /&gt;</span>
@@ -67,10 +86,15 @@
 						</figure>
 						<div class='project-info'>
 							<div class='project-details'>
-								<p>Приложение - органайзер для управления повседневными задачами.</p>
+								<p lang='en'>Organizer app for managing day-to-day tasks.</p>
+								<p lang='ru'>Приложение - органайзер для управления повседневными задачами.</p>
+
 								<p class='project-tech'>Webpack / JavaScript / HTML / CSS</p>
 							</div>
-							<a target='_blank' href='https://aleafan.github.io/to-do-list/'>Открыть сайт ></a>
+							<a target='_blank' href='https://aleafan.github.io/to-do-list/'>
+								<span lang='en'>Visit website ></span>
+								<span lang='ru'>Открыть сайт ></span>
+							</a>
 						</div>
 					</div>
 
@@ -78,7 +102,7 @@
 						<figure>
 							<img class='project-img'
 								src='./assets/images/rock-memory-game.png' 
-								alt='Скриншот игры "Rock Memory Game"'
+								alt='Screenshot from "Rock Memory Game"'
 							/>
 							<figcaption>
 								<span class="invisible">&lt; </span>Rock Memory Game<span class="invisible"> /&gt;</span>
@@ -86,10 +110,15 @@
 						</figure>
 						<div class='project-info'>
 							<div class='project-details'>
-								<p>Карточная игра на тренировку памяти в стилистике рок музыки.</p>
+								<p lang='en'>Memory card game on the theme of rock music.</p>
+								<p lang='ru'>Карточная игра на тренировку памяти в стилистике рок музыки.</p>
+
 								<p class='project-tech'>React / CSS</p>
 							</div>
-							<a target='_blank' href='https://aleafan.github.io/rock-memory-game/'>Открыть сайт ></a>
+							<a target='_blank' href='https://aleafan.github.io/rock-memory-game/'>
+								<span lang='en'>Visit website ></span>
+								<span lang='ru'>Открыть сайт ></span>
+							</a>
 						</div>
 					</div>
 
@@ -97,7 +126,7 @@
 						<figure>
 							<img class='project-img'
 								src='./assets/images/book-worm.png' 
-								alt='Скриншот из приложения "Book Worm"'
+								alt='Screenshot from "Book Worm" app'
 							/>
 							<figcaption>
 								<span class="invisible">&lt; </span>Book Worm<span class="invisible"> /&gt;</span>
@@ -105,12 +134,19 @@
 						</figure>
 						<div class='project-info'>
 							<div class='project-details'>
-								<p>
+								<p lang='en'>
+									App for keeping catalogue of books with personal notes. Back-end is based on Flask, work with database via SQLite.
+								</p>
+								<p lang='ru'>
 									Приложение для ведения каталога книг с личными заметками. Back-end на Flask, работа с базой данных через SQLite.
 								</p>
+
 								<p class='project-tech'>Flask / Python / SQLite / Bootstrap / jQuery</p>
 							</div>
-							<a target='_blank' href='http://book-worm-project.herokuapp.com/'>Открыть сайт ></a>
+							<a target='_blank' href='http://book-worm-project.herokuapp.com/'>
+								<span lang='en'>Visit website ></span>
+								<span lang='ru'>Открыть сайт ></span>
+							</a>
 						</div>
 					</div>
 
@@ -118,18 +154,28 @@
 						<figure>
 							<img class='project-img'
 								src='./assets/images/restaurant-site.png' 
-								alt='Скриншот сайта ресторана'
+								alt='Screenshot of restaurant site'
 							/>
 							<figcaption>
-								<span class="invisible">&lt; </span>Сайт ресторана<span class="invisible"> /&gt;</span>
+								<span class="invisible">&lt; </span>
+
+								<span lang='en'>Restaurant website</span>
+								<span lang='ru'>Сайт ресторана</span>
+								
+								<span class="invisible"> /&gt;</span>
 							</figcaption>
 						</figure>
 						<div class='project-info'>
 							<div class='project-details'>
-								<p>Одностраничный сайт вымышленного ресторана Santo Palato.</p>
+								<p lang='en'>Single page website of imaginary restaurant "Santo Palato".</p>
+								<p lang='ru'>Одностраничный сайт вымышленного ресторана "Santo Palato".</p>
+
 								<p class='project-tech'>Webpack / JavaScript / HTML / CSS</p>
 							</div>
-							<a target='_blank' href='https://aleafan.github.io/restaurant-site/'>Открыть сайт ></a>
+							<a target='_blank' href='https://aleafan.github.io/restaurant-site/'>
+								<span lang='en'>Visit website ></span>
+								<span lang='ru'>Открыть сайт ></span>
+							</a>
 						</div>
 					</div>
 
@@ -137,7 +183,7 @@
 						<figure>
 							<img class='project-img'
 								src='./assets/images/tic-tac-toe.png' 
-								alt='Скриншот игры "Tic Tac Toe"'
+								alt='Screenshot from "Tic Tac Toe"'
 							/>
 							<figcaption>
 								<span class="invisible">&lt; </span>Tic Tac Toe<span class="invisible"> /&gt;</span>
@@ -145,10 +191,15 @@
 						</figure>
 						<div class='project-info'>
 							<div class='project-details'>
-								<p>Игра "Крестики-нолики" для двоих игроков.</p>
+								<p lang='en'>Tic Tac Toe game for two players.</p>
+								<p lang='ru'>Игра "Крестики-нолики" для двоих игроков.</p>
+
 								<p class='project-tech'>JavaScript / HTML / CSS</p>
 							</div>
-							<a target='_blank' href='https://aleafan.github.io/tic-tac-toe/'>Открыть сайт ></a>
+							<a target='_blank' href='https://aleafan.github.io/tic-tac-toe/'>
+								<span lang='en'>Visit website ></span>
+								<span lang='ru'>Открыть сайт ></span>
+							</a>
 						</div>
 					</div>
 
@@ -156,7 +207,7 @@
 						<figure>
 							<img class='project-img'
 								src='./assets/images/cv-builder.png' 
-								alt='Скриншот из приложения "CV Builder"'
+								alt='Screenshot from "CV Builder" app'
 							/>
 							<figcaption>
 								<span class="invisible">&lt; </span>CV Builder<span class="invisible"> /&gt;</span>
@@ -164,32 +215,50 @@
 						</figure>
 						<div class='project-info'>
 							<div class='project-details'>
-								<p>Приложение для составления резюме на русском и английском языках.</p>
+								<p lang='en'>App for building CV with English and Russian interfaces.</p>
+								<p lang='ru'>Приложение для составления резюме на русском и английском языках.</p>
+
 								<p class='project-tech'>React / CSS</p>
 							</div>
-							<a target='_blank' href='https://aleafan.github.io/cv-project/'>Открыть сайт ></a>
+							<a target='_blank' href='https://aleafan.github.io/cv-project/'>
+								<span lang='en'>Visit website ></span>
+								<span lang='ru'>Открыть сайт ></span>
+							</a>
 						</div>
 					</div>
 				</div>
 				
 				<a href='https://github.com/Aleafan' target='_blank' class='btn-show-more'>
-					Больше проектов на GitHub
+					<span lang='en'>More projects on GitHub</span>
+					<span lang='ru'>Больше проектов на GitHub</span>
+
 					<i class='fas fa-angle-right'></i>
 				</a>
 			</section>
 
 			<section id='about'>
-				<h2>Обо мне</h2>
+				<h2 lang='en'>About</h2>
+				<h2 lang='ru'>Обо мне</h2>
+
 				<div class='underliner'></div>
+
 				<div class='content-about'>
-					<p>
+					<p lang='en'>
+						Around a year ago I decided to change career in engineering for web-development.
+						On the path of self-learning I studied on online courses: "Harvard's CS50: Introduction to Computer Science", "The Odin Project", "freeCodeCamp".
+						During my study I worked with different technologies and developed a few of my own
+						<a href='#projects'>websites and applications.</a>
+					</p>
+					<p lang='ru'>
 						Около года назад я принял решение сменить карьеру инженера и попробовать свои силы в веб-разработке. 
-						На пути самообучения занимался на онлайн-курсах: "Harvard's CS50 - Introduction to Computer Science", "The Odin Project", "freeCodeCamp".
+						На пути самообучения занимался на онлайн-курсах: "Harvard's CS50: Introduction to Computer Science", "The Odin Project", "freeCodeCamp".
 						За время обучения поработал с различными технологиями и разработал несколько собственных 
 						<a href='#projects'>веб-сайтов и приложений.</a>
 					</p>
 					
-					<h3>Я работаю со следующими технологиями:</h3>
+					<h3 lang='en'>I work with following technologies:</h3>
+					<h3 lang='ru'>Я работаю со следующими технологиями:</h3>
+					
 					<ul class='skills-list'>
 						<li>JavaScript</li>
 						<li>React</li>
@@ -200,11 +269,20 @@
 						<li>Git / GitHub</li>
 					</ul>
 					
-					<p>
-						Так же на базовом уровне знаком с
+					<p lang='en'>
+						Also at a basic level I'm familiar with
 						<span class='skills-span'>Python, SQLite, Flask, jQuery, Sass.</span>
 					</p>
-					<p>
+					<p lang='ru'>
+						Также на базовом уровне знаком с
+						<span class='skills-span'>Python, SQLite, Flask, jQuery, Sass.</span>
+					</p>
+
+					<p lang='en'>
+						I strive for clear structured code and minimalistic responsive design.
+						I enjoy solving complex problems step by step during the development process.
+					</p>
+					<p lang='ru'>
 						Я стремлюсь к ясному структурированному коду, минималистичному адаптивному дизайну.
 						Получаю удовольствие, шаг за шагом решая комплексные проблемы в процессе разработки.
 					</p>
@@ -212,11 +290,13 @@
 			</section>
 			
 			<section id='contacts'>
-				<h2>Контактные данные:</h2>
+				<h2 lang='en'>Contact Information:</h2>
+				<h2 lang='ru'>Контактные данные:</h2>
+
 				<div class='underliner'></div>
 
 				<div class='contact-data'>
-					<a href='mailto:ae.afanasov@yandex.ru' target='_blank'>
+					<a href='mailto:ae.afanasov@yandex.com' target='_blank'>
 						<i class='far fa-envelope-open'></i>
 						Email
 					</a>
@@ -229,8 +309,22 @@
 		</main>
 
 		<footer>
-			<p>* AA battery logo by Fatima Jantasri from the Noun Project</p>
-			<p>&copy 2021, Александр Афанасов</p>
+			<div>
+				<p lang='en' class='p-lang'># Change language:</p>
+				<p lang='ru' class='p-lang'>* Изменить язык:</p>
+
+				<button type='button' class='btn-lang' name='ru'>
+					<img src='./assets/images/RU.png' alt='Russian flag'>
+				</button>
+				<button type='button' class='btn-lang' name='en'>
+					<img src='./assets/images/GB.png' alt='English flag'>
+				</button>
+			</div>
+				
+			<div>
+				<p>&copy AA battery logo by Fatima Jantasri from the Noun Project</p>
+				<p>&copy 2021, Alexander Afanasov</p>
+			</div>
 		</footer>
 	</body>
 </html>
