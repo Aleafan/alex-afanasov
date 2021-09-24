@@ -30,7 +30,7 @@ main {
 
 section {
 	scroll-margin-top: 90px;
-	scroll-snap-margin-top: 90px;
+	-webkit-scroll-snap-margin-top: 90px;
 }
 
 h2 {
@@ -202,15 +202,14 @@ h1 {
 	margin: 0;
 }
 
-#welcome img {
-	display: block;
+.my-photo {
 	width: 150px;
 	margin-bottom: 0;
 	border-radius: 50%;
 	border: 5px solid #680595;
 }
 @media (min-width: 720px) {
-	#welcome img {
+	.my-photo {
 		width: 180px;
 	}
 }
@@ -429,9 +428,9 @@ figcaption {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: calc(100vh - 107px);
+	height: calc(100vh - 120px);
 	scroll-margin-top: 0;
-	scroll-snap-margin-top: 0;
+	-webkit-scroll-snap-margin-top: 0;
 }
 
 .contact-data {
@@ -478,11 +477,13 @@ figcaption {
 /* Footer */
 
 footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	font-family: 'Roboto Condensed', sans-serif;
 	box-shadow: 0 0 2px 2px black;
 	padding: 5px 3px;
 	font-size: 0.8rem;
-	text-align: center;
 	background-color: whitesmoke;
 }
 @media (min-width: 350px) {
@@ -493,14 +494,39 @@ footer {
 }
 @media (min-width: 720px) {
 	footer {
+		flex-direction: row-reverse;
+		padding: 5px 16px;
 		font-size: 1rem;
 	}
 }
 
 footer p {
-	margin: 0;
+	margin: 0 0 0.2rem;
 }
 
 footer p:last-child {
-	margin-top: 0.3rem;
+	margin-bottom: 0rem;
+}
+
+.p-lang {
+	display: inline-block;
+}
+
+.btn-lang {
+	vertical-align: text-bottom;
+	border: none;
+	width: 30px;
+	padding: 2px;
+	cursor: pointer;
+}
+
+
+/* Display content based on selected language */
+
+html:lang(ru) :lang(en) {
+	display: none;
+}
+
+html:lang(en) :lang(ru) {
+	display: none;
 }
