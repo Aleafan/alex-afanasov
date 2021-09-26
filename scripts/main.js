@@ -1,14 +1,24 @@
 // Language selection functionality
-if (/^ru\b/.test(navigator.language)) {
-  document.documentElement.setAttribute('lang', 'ru');
-}
-
 const btnsLang = document.querySelectorAll('.btn-lang');
 btnsLang.forEach(btn => btn.addEventListener('click', changeLanguage));
 
 function changeLanguage() {
   document.documentElement.setAttribute('lang', this.name);
+  localStorage.setItem('lang', this.name);
 }
+
+function setPageLanguage() {
+  const storedLang = localStorage.getItem('lang');
+  const html = document.documentElement;
+  if (storedLang) {
+    html.setAttribute('lang', storedLang);
+  }
+  else if (/^ru\b/.test(navigator.language)) {
+    html.setAttribute('lang', 'ru');
+  }
+}
+
+setPageLanguage();
 
 // Marking active nav tab functionality
 document.addEventListener('scroll', debounce(markActiveTab, 80));
