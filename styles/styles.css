@@ -332,6 +332,7 @@ figcaption {
 
 .btn-show-more {
 	width: max-content;
+	min-width: 250px;
 	text-align: center;
 	font-size: 1.1rem;
 	margin: 2.5rem auto 0;
@@ -418,6 +419,10 @@ figcaption {
 .skills-span {
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
+}
+
+#about .btn-show-more {
+	margin: 2rem auto;
 }
 
 
